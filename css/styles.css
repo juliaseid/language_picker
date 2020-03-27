@@ -25,7 +25,6 @@ h3 {
   display: none;
 }
 
-
 #results {
   color: darkslateblue;
   background-color: antiquewhite;
@@ -33,6 +32,10 @@ h3 {
   border: 3px solid darkslateblue;
   border-radius: 10px;
   padding: 8px;
+  display: none;
+}
+
+#resultsTeaser {
   display: none;
 }
 
