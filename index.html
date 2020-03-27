@@ -28,19 +28,25 @@
           <input id="email" class="form-control" type="email">
         </div>
         <div class="form-group">
+        </div>
           <label for="zipCode">Zip Code:</label>
           <input id="zipCode" class="form-control" type="number">
-        </div>
         <button class="submit">I'm Ready!</button>
       </form>
     </div>
     
     <div id="quizView">
-    <form id="quiz">
+      <div class="quizHeader">
         <h5><bold>Thanks, <span id="userName"></span>!</bold></h5>
         <h5>We can already tell you're going to be great!  Take this quiz and we'll tell you where to start!</h5>
-        <div class="quizQuestion1" class="card">
-          <p>How do you feel about Apple products?</p>
+      </div>
+
+      <div class="panel panel-primary" class="quizQuestion1">
+        <form class="quiz">
+        <div class="panel-heading">
+          <h5 type="panel-title">How do you feel about Apple products?</h5>
+        </div>  
+        <div class="panel-body">
           <div class="appleQ">
             <label>
               <input type="radio" name="flavor" value="mandatory" checked>
@@ -49,62 +55,150 @@
           </div>
           <div class="appleQ">
             <label>
-              <input type="radio" name="flavor" value="prefer" checked>
+              <input type="radio" name="flavor" value="prefer">
               I like them a lot, but I'm flexible.
             </label>
           </div>
           <div class="appleQ">
             <label>
-              <input type="radio" name="flavor" value="neutral" checked>
+              <input type="radio" name="flavor" value="neutral">
               I will use them if that's what is easiest or  most appropriate.
             </label>
           </div>
           <div class="appleQ">
             <label>
-              <input type="radio" name="flavor" value="dislike" checked>
+              <input type="radio" name="flavor" value="dislike">
               I really do not like Apple products, and would prefer to avoid them.
             </label>
           </div>
+        </div>
+      </form>
       </div>
 
-        <div class="quizQuestion2" class="well">
-          <div class="productsQ">
+      <div class="panel panel-primary" class="quizQuestion2">
+      <form class="quiz">
+        <div class="panel-heading">
+          <h5 type="panel-title">What type of products would you most like to work on?</h5>
+        </div>  
+        <div class="panel-body">
+          <div class="productQ">
             <label>
-              <input type="radio" name="flavor" value="chocolate" checked>
-              Chocolate
+              <input type="radio" name="flavor" value="Mobile" checked>
+              Mobile Device Apps
+            </label>
+          </div>
+          <div class="productQ">
+            <label>
+              <input type="radio" name="flavor" value="IoT">
+              IoT (Internet of Things) Devices and Controllers
+            </label>
+          </div>
+          <div class="productQ">
+            <label>
+              <input type="radio" name="flavor" value="enterprise">
+              Large-scale Enterprise-Level Applications
+            </label>
+          </div>
+          <div class="productQ">
+            <label>
+              <input type="radio" name="flavor" value="noChoice">
+              I don't want to choose now!
             </label>
           </div>
         </div>
+      </form>
+      </div>
 
-        <div class="quizQuestion3" class="well">
-          <div class="timeFrameQ">
+      <div class="panel panel-primary" class="quizQuestion3">
+        <form class="quiz">
+        <div class="panel-heading">
+          <h5 type="panel-title">Do you like to really dig deep into systems and master skills, spending a long time on a single project?</h5>
+        </div>  
+        <div class="panel-body">
+          <div class="timeQ">
             <label>
-              <input type="radio" name="flavor" value="chocolate" checked>
-              Chocolate
+              <input type="radio" name="flavor" value="mastery" checked>
+              Yes! I would love to spend a year or more working on a single complex project.
+            </label>
+          </div>
+          <div class="timeQ">
+           <label>
+            <input type="radio" name="flavor" value="moderate">
+            I like a mix of short and long-term projects.
+            </label>
+          </div>
+          <div class="timeQ">
+            <label>
+              <input type="radio" name="flavor" value="variety">
+              I prefer variety, and like to work on many smaller projects.
             </label>
           </div>
         </div>
+      </form>
+      </div>    
 
-        <div class="quizQuestion4" class="well">
+      <div class="panel panel-primary" class="quizQuestion4">
+        <form class="quiz">
+        <div class="panel-heading">
+          <h5 type="panel-title">Are you more interested in consumer-oriented web development, with an eye toward design, or in back-end work with large data sets?</h5>
+        </div>  
+        <div class="panel-body">
           <div class="audienceQ">
             <label>
-              <input type="radio" name="flavor" value="chocolate" checked>
-              Chocolate
+              <input type="radio" name="flavor" value="design" checked>
+              I want to create fun, functional products that look nice and are easy to use!
             </label>
           </div>
-        </div>
-
-        <div class="quizQuestion5" class="well">
-          <div class="reptilesQ">
+          <div class="audienceQ">
             <label>
-              <input type="radio" name="flavor" value="chocolate" checked>
-              Chocolate
+              <input type="radio" name="flavor" value="moderateWeb">
+              I like to make things look nice, but I'm more concerned with usefulness than originality and design. 
+            </label>
+          </div>
+          <div class="audienceQ">
+            <label>
+              <input type="radio" name="flavor" value="data">
+              I like to focus on logical problems and would like to work with scientific or financial data and ML algorithms.
             </label>
           </div>
         </div>
+        </form>
+      </div>    
 
-
+      <div class="panel panel-primary" class="quizQuestion5">
+        <form class="quiz">
+        <div class="panel-heading">
+          <h5 type="panel-title">How do you feel about reptiles?</h5>
+        </div>  
+        <div class="panel-body">
+          <div class="reptileQ">
+            <label>
+              <input type="radio" name="flavor" value="soGreat" checked>
+              I love them!  They're fascinating and kind of cute!
+            </label>
+          </div>
+          <div class="reptileQ">
+            <label>
+              <input type="radio" name="flavor" value="cool">
+              I like to see them in zoos or small ones in nature, and it's kind of neat that people have them as pets.
+            </label>
+          </div>
+          <div class="reptileQ">
+            <label>
+              <input type="radio" name="flavor" value="okIGuess">
+              They have their place in the world and I'm fine so long as they stay there.
+            </label>
+          </div>
+          <div class="reptileQ">
+            <label>
+              <input type="radio" name="flavor" value="creepy">
+              No. Thank. You.
+            </label>
+          </div>
+        </div>
       </form>
+      </div>
+
       <button class="submit" id="quizButton" form="quiz">Calculate My Best Fit!</button>
     </div>
 
