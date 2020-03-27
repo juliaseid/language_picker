@@ -13,12 +13,12 @@ $(document).ready(function() {
     };
   });
 
-  $("#quiz").submit(function(event){
+  $(".quiz").submit(function(event){
     var firstName=$("input#firstName").val(); 
     $("#userName2").empty().append(firstName);
     $("#results").show();
     $("#resultsTeaser").show();
-    event.preventDefault();
+    event.preventDefault();  
     
   });
 
