@@ -4,7 +4,7 @@ $(document).ready(function() {
     var email=$("input#email").val();
     
     if (email) {
-      $(".firstName").empty().append(firstName);
+      $("#userName").empty().append(firstName);
       $("#quizView").show();
       event.preventDefault();
     }
@@ -13,10 +13,10 @@ $(document).ready(function() {
     };
   });
 
-  $("#quiz").submit(function(event) {
-    $(".firstName").empty().append(firstName);
-    $("#results#resultsTeaser").show();
-    event.preventDefault();
+  $("#quizButton").this.submit(function(event){
+    $("#userName").empty().append(firstName);
+    $("#results").show();
+    
   });
 
   $("#resultsButton").click(function(event) {

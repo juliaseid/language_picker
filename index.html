@@ -10,27 +10,44 @@
   <body>
   <container>
     <div id="firstView">
-      <h2>What Is the Right Language For You?</h2>
-      <h3>Take this quiz to find out!</h3>
+      <h2>Want to Become A Software Developer?</h2>
+      <h3>Take this quiz to find out the right first language for you!</h3>
 
       <form id="userInfo">
-        <h5>Tell us a bit about you to get started:</h5>
-
+        <h5><bold>Tell us a bit about you to get started:</bold></h5>
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input id="firstName" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input id="lastName" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input id="email" class="form-control" type="email">
+        </div>
+        <div class="form-group">
+          <label for="zipCode">Zip Code:</label>
+          <input id="zipCode" class="form-control" type="number">
+        </div>
+        <button class="submit">I'm Ready!</button>
       </form>
     </div>
     
     <div id="quizView">
     <form id="quiz">
-        <h5>Thanks, <span class="firstName"></span></h5>
+        <h5><bold>Thanks, <span id="userName"></span>!</bold></h5>
         <h5>We can already tell you're going to be great!  Take this quiz and we'll tell you where to start!</h5>
-
       </form>
+      <button class="submit" id="quizButton" form="quiz">Share My Results!</button>
     </div>
 
     <div id="results">
+      test
       <div id="resultsTeaser">
-        <h5>Wow, <span class="firstName"></span>, we are so excited to share your results with you!</h5>
-        <h5>Click here to get your perfect programming language emailed to you!</h5>
+        <h5><span id="userName"></span>, we are so excited to share your results with you!</h5>
+        <h5><bold>Click here to get your perfect programming language emailed to you!</bold></h5>
         <button class="button" id="resultsButton" class="btn-btnprimary">Get My Results!</button>
       </div>
       <div id="realResults">
