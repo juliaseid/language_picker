@@ -13,7 +13,7 @@ $(document).ready(function() {
     };
   });
 
-  $("#quizButton").this.submit(function(event){
+  $("#quizButton").submit(function(event){
     $("#userName").empty().append(firstName);
     $("#results").show();
     
