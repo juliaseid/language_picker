@@ -1,11 +1,3 @@
-$(document).ready(function() {
-  
-var Q1=$("input:radio[name=apple]:checked").val()
-var Q2=$("input:radio[name=product]:checked").val()
-var Q3=$("input:radio[name=timeFrame]:checked").val()
-var Q4=$("input:radio[name=audience]:checked").val()
-var Q5=$("input:radio[name=reptile]:checked").val()
-
 function chooseLang(Q1, Q2, Q3, Q4, Q5) {
   var languageRec=null;
   if (Q1==="mandatory" || (Q1==="prefer" && Q2==="mobile" && (Q3==="variety" || Q4==="design"))) {
@@ -22,10 +14,8 @@ function chooseLang(Q1, Q2, Q3, Q4, Q5) {
   }
 return languageRec
 }
-  
-  
-  
-  
+
+$(document).ready(function() {
   $("#userInfo").submit(function(event) {
     var firstName=$("input#firstName").val();
     var email=$("input#email").val();
@@ -48,8 +38,13 @@ return languageRec
     event.preventDefault();  
     
   });
-
+  
   $("#resultsButton").click(function(event) {
+    var Q1=$("input:radio[name=apple]:checked").val()
+    var Q2=$("input:radio[name=product]:checked").val()
+    var Q3=$("input:radio[name=timeFrame]:checked").val()
+    var Q4=$("input:radio[name=audience]:checked").val()
+    var Q5=$("input:radio[name=reptile]:checked").val()
     var langRec=chooseLang(Q1, Q2, Q3, Q4, Q5);
     var selLangDesc=null;
       if (langRec==="Swift") {
@@ -65,9 +60,9 @@ return languageRec
         selLangDesc="JavaScript is a great place to begin if you're not sure where you want to go!  It is mobile-friendly, but not platform-specific, can interact well with databases, and has a very broad and deep code base to support your work in virtually any project you might take on.  It might not be the very best at anything, but it's relatively easy to learn and extremely versatile."
       };
     $("#bestLanguage").empty().append(langRec);
-    $("languageDesc").empty().append(selLangDesc);
+    $("#languageDesc").empty().append(selLangDesc);
     $("#realResults").show();
     event.preventDefault();
-  });
 
+  });
 });
